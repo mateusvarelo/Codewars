@@ -6,13 +6,7 @@ If the two numbers are equal return a or b.
 Note: a and b are not ordered!"""
 def get_sum(a,b):
     #good luck!
-    lista = [a,b]
-    lista.sort()
-    if (a==b):
-        return a
-    else:    
-        return sum([i for i in range(lista[0],lista[1]+1)])
-a,b = 3,5       
+    return sum(range(min(a, b), max(a, b) + 1))
+a,b = 10,5       
 print(get_sum(a,b))
-    
-        
+
