@@ -11,9 +11,8 @@ def get_sum(a,b):
     if (a==b):
         return a
     else:    
-        soma_lista = [i for i in range(lista[0],lista[1]+1)]
-    return sum(soma_lista)
-        
-
+        return sum([i for i in range(lista[0],lista[1]+1)])
+a,b = 3,5       
+print(get_sum(a,b))
     
         
