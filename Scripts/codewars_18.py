@@ -8,13 +8,15 @@ Ignore letter case.
 """
 def is_isogram(string):
     #your code here
-    pilha = []
-    if len(string) == 0:
-        return True
-    else:
-        for letra in string:
-            letra = letra.lower()
-            if letra in pilha:
-                return False
-            pilha.append(letra)
-    return True 
+    return len(string) == len(set(string.lower()))
+    # pilha = []
+    # if len(string) == 0:
+    #     return True
+    # else:
+    #     for letra in string:
+    #         letra = letra.lower()
+    #         if letra in pilha:
+    #             return False
+    #         pilha.append(letra)
+    # return True 
+print(is_isogram('abc'))    
