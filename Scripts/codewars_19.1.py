@@ -10,10 +10,12 @@ def wave(people):
       lista = []
       novalista = list(people)
       for i in range(len(people)):
-         people[0] = people[0].lower()
+         
          print(people) 
          if i>0:
-           people[i] = people[i].upper()
-         lista.append(lista)
+             novalista.append(people[i].upper())
+         else:
+             novalista.insert(0,people[0].lower())  
+         lista.append(''.join(novalista))
       return lista
 print(wave('Mateus'))
