@@ -4,10 +4,10 @@ string to a new string where each character in the new string is "(" if that cha
 when determining if a character is a duplicate.
 """
 def duplicate_encode(word):
-    #your code here
-    word = list(word.lower())  
+    #your code here 
     return ''.join([
-                    ')' if word.count(i) > 1 else '(' 
-                    for i in word])         
+                    ')' if word.count(i.lower()) > 1 else '(' 
+                    for i in word.lower()]) 
+    return         
 print(duplicate_encode('aaaaaAaaaa'))    
     
