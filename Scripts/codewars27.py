@@ -8,6 +8,6 @@ def duplicate_encode(word):
     return ''.join([
                     ')' if word.count(i.lower()) > 1 else '(' 
                     for i in word.lower()]) 
-    return         
-print(duplicate_encode('aaaaaAaaaa'))    
+             
+print(duplicate_encode('Jb!cn!vuP mGSkRGwIFOPG!QaS'))    
     
