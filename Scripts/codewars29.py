@@ -5,7 +5,6 @@ def sort_by_length(arr):
           ]
      return arr
 print(
-
     sort_by_length(
                 ['beg', 'i', 'life', 'to']
                 )
