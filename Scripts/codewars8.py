@@ -1,3 +1,5 @@
-def iq_test(numbers="2 4 7 8 10"):
-    lista = list(numbers)
-    return f'{lista}'
+def to_weird_case(string):
+    nova_string = [let.upper() if i % 2 == 0 else let.lower()
+                   for i,let in enumerate(string)
+                  ]
+    return ''.join(nova_string) 
