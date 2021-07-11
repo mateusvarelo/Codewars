@@ -15,5 +15,5 @@ def calculate_string(st):
               elif let == '/':
                  return  str(int(float(lista[0])/float(lista[1])))
               elif let == '-':
-                 return  str(int(float(lista[0])-float(lista[1])))        
+                 return  str(round((float(lista[0])-float(lista[1]))))        
 print(calculate_string("fsdfsd235???34.4554s4234df-sdfgf2g3h4j442"))
