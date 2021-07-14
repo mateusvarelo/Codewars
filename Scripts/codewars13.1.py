@@ -5,4 +5,5 @@ def duplicate_encode(word):
                    '(' if word.upper().count(letra)<2 else ')'  
                     for letra in word.upper()] 
  )  
+    
 print(duplicate_encode("wI(GzSG@)FOdyRQwau(a"))
