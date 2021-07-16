@@ -1,32 +1,29 @@
-
+import re
 class Calculator(object):
   
   def evaluate(self, string):
       listaNum = []
-      lista_Numeros = [
-                      float(i) for i in string
-                      if i.isdigit()
-      ]
+      listaNum = re.findall(r'\d.?\d*', string)
+      lista_Numeros = [float(i) for i in listaNum]
+  
       lista_Operadores = [ operador
                           for operador in string
-                          if not operador.isspace()  and not operador.isnumeric()  and operador != '.'
+                          if not operador.isspace()  and not operador.isnumeric() and operador != '.'
       ]
-      #lista_Operadores.insert(0,'+')
-      print(lista_Operadores)
+      
+      lista_Operadores.insert(0,'+')
       resultado = []
-
-      for num, op in zip(lista_Numeros, lista_Operadores): 
-        try:
+      zipado = list(zip(lista_Numeros, lista_Operadores))
+      
+      for num, op in zipado: 
           if op == '/':
             resultado.append(resultado.pop() / num)
-          elif op == '':
+          elif op == '*':
             resultado.append(resultado.pop() * num)
           elif op == '+':
             resultado.append(num)
           elif op == '-':
             resultado.append(-num)
-        except:
-             continue
       return sum(resultado)
 num = Calculator()    
-print(num.evaluate("2 / 2 + 3 * 4 - 6"))
+print(num.evaluate("1.1 + 2.2 + 3.3"))
