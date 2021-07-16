@@ -1,20 +1,19 @@
-import re
+
 class Calculator(object):
   
   def evaluate(self, string):
-      listaNumeros = []
       listaNum = []
-      listaOp = []
-
-      listaNum = re.findall(r'\d.?\d', string)
-      for i in listaNum:
-        listaNumeros.append(float(i))
-
-      listaOp.append('+')
-      for op in string:
-        if op.isspace() == False and op.isnumeric() == False and op != '.': 
-          listaOp.append(op)
-      resultado = []
+      listaNumeros = [
+                      float(i) for i in string
+                      if i.isdigit()
+      ]
+      lista_Op+= '+'
+      lista_Operadores = [ operador
+                          for operador in string
+                          if not operador.isspace()  and not operador.isnumeric()  and operador != '.'
+      ]
+      
+           resultado = []
 
       for n, op in zip(listaNumeros, listaOp): 
         if op == '/':
