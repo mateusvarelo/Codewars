@@ -8,6 +8,7 @@ def persistence(n):
     # your
     cont = 0
     n = list(str(n))
+    
     if len(n) != 1:
       while len(n)!=1:
            n = numpy.prod(list(map(int,n))) 
