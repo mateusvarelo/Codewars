@@ -13,7 +13,10 @@ def pig_it(text):
             lista_letras.append(letra)
             lista_letras.pop(0)
         
-        lista.append(''.join(lista_letras))
+            lista.append(''.join(lista_letras))
+        else: 
+            lista.append(primeira_letra)
+                
     return ' '.join(lista)
 
-print(pig_it('Pig latin is cool !'))
+print(pig_it('Pig latin is cool '))
